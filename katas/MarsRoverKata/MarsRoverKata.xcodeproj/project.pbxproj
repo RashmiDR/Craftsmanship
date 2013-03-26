@@ -1,0 +1,223 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		424644001701474000B4E685 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 424643FF1701474000B4E685 /* main.cpp */; };
+		424644021701474000B4E685 /* MarsRoverKata.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 424644011701474000B4E685 /* MarsRoverKata.1 */; };
+		4246440A1701479B00B4E685 /* rover.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 424644081701479B00B4E685 /* rover.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		424643F91701474000B4E685 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				424644021701474000B4E685 /* MarsRoverKata.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		424643FB1701474000B4E685 /* MarsRoverKata */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MarsRoverKata; sourceTree = BUILT_PRODUCTS_DIR; };
+		424643FF1701474000B4E685 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		424644011701474000B4E685 /* MarsRoverKata.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MarsRoverKata.1; sourceTree = "<group>"; };
+		424644081701479B00B4E685 /* rover.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rover.cpp; sourceTree = "<group>"; };
+		424644091701479B00B4E685 /* rover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rover.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		424643F81701474000B4E685 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		424643F01701474000B4E685 = {
+			isa = PBXGroup;
+			children = (
+				424643FE1701474000B4E685 /* MarsRoverKata */,
+				424643FC1701474000B4E685 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		424643FC1701474000B4E685 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				424643FB1701474000B4E685 /* MarsRoverKata */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		424643FE1701474000B4E685 /* MarsRoverKata */ = {
+			isa = PBXGroup;
+			children = (
+				424643FF1701474000B4E685 /* main.cpp */,
+				424644081701479B00B4E685 /* rover.cpp */,
+				424644091701479B00B4E685 /* rover.h */,
+				424644011701474000B4E685 /* MarsRoverKata.1 */,
+			);
+			path = MarsRoverKata;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		424643FA1701474000B4E685 /* MarsRoverKata */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 424644051701474000B4E685 /* Build configuration list for PBXNativeTarget "MarsRoverKata" */;
+			buildPhases = (
+				424643F71701474000B4E685 /* Sources */,
+				424643F81701474000B4E685 /* Frameworks */,
+				424643F91701474000B4E685 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarsRoverKata;
+			productName = MarsRoverKata;
+			productReference = 424643FB1701474000B4E685 /* MarsRoverKata */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		424643F21701474000B4E685 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Rashmi Devarahalli";
+			};
+			buildConfigurationList = 424643F51701474000B4E685 /* Build configuration list for PBXProject "MarsRoverKata" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 424643F01701474000B4E685;
+			productRefGroup = 424643FC1701474000B4E685 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				424643FA1701474000B4E685 /* MarsRoverKata */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		424643F71701474000B4E685 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				424644001701474000B4E685 /* main.cpp in Sources */,
+				4246440A1701479B00B4E685 /* rover.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		424644031701474000B4E685 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		424644041701474000B4E685 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		424644061701474000B4E685 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		424644071701474000B4E685 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		424643F51701474000B4E685 /* Build configuration list for PBXProject "MarsRoverKata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				424644031701474000B4E685 /* Debug */,
+				424644041701474000B4E685 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		424644051701474000B4E685 /* Build configuration list for PBXNativeTarget "MarsRoverKata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				424644061701474000B4E685 /* Debug */,
+				424644071701474000B4E685 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 424643F21701474000B4E685 /* Project object */;
+}

@@ -4,11 +4,15 @@ using namespace std;
 #define ORIGINAL_PRICE_OF_ONE_BOOK 8
 
 double getDiscountedPrice(int differentBooks);
-void findBiggestDiscountedPrice(int book1Count, int book2Count, int book3Count, int book4Count, int book5Count);
-int findMinOfSameTypeBooks(int book1Count, int book2Count, int book3Count, int book4Count, int book5Count);
+void findBiggestDiscountedPrice(int book1Count, int book2Count, int book3Count, 
+									int book4Count, int book5Count);
+int findMinOfSameTypeBooks(int book1Count, int book2Count, int book3Count, 
+									int book4Count, int book5Count);
 int minAboveZero(int a, int b);
-int countTypesOfBooksStillPresent(int book1Count, int book2Count, int book3Count, int book4Count, int book5Count);
-void decrementBooksByCount(int decrementCount, int &book1Count, int &book2Count, int &book3Count, int &book4Count, int &book5Count);
+int countTypesOfBooksStillPresent(int book1Count, int book2Count, int book3Count, 
+									int book4Count, int book5Count);
+void decrementBooksByCount(int decrementCount, int &book1Count, int &book2Count, 
+									int &book3Count, int &book4Count, int &book5Count);
 
 int main()
 {
@@ -29,7 +33,8 @@ int main()
 	cout << "Enter the number of copies of fifth book in the cart" << endl;
 	cin >> book5Count;
 	
-	findBiggestDiscountedPrice(book1Count, book2Count, book3Count, book4Count, book5Count);	
+	findBiggestDiscountedPrice(book1Count, book2Count, book3Count, 
+										book4Count, book5Count);	
 }
 
 double getDiscountedPrice(int differentBooks)
@@ -58,7 +63,8 @@ double getDiscountedPrice(int differentBooks)
 	return discountedPrice;
 }
 
-void findBiggestDiscountedPrice(int book1Count, int book2Count, int book3Count, int book4Count, int book5Count)
+void findBiggestDiscountedPrice(int book1Count, int book2Count, int book3Count, 
+									int book4Count, int book5Count)
 {
 	int setsOfFive = 0;
 	int setsOfFour = 0;
@@ -69,11 +75,13 @@ void findBiggestDiscountedPrice(int book1Count, int book2Count, int book3Count, 
 	double price = 0;
 	int count = 0;	
 	
-	int typesOfBooksPresent = countTypesOfBooksStillPresent(book1Count, book2Count, book3Count, book4Count, book5Count);
+	int typesOfBooksPresent = countTypesOfBooksStillPresent(book1Count, book2Count, 
+											book3Count, book4Count, book5Count);
 	
 	while(typesOfBooksPresent > 0)
 	{
-		count = findMinOfSameTypeBooks(book1Count, book2Count, book3Count, book4Count, book5Count);
+		count = findMinOfSameTypeBooks(book1Count, book2Count, book3Count, 
+											book4Count, book5Count);
 		switch(typesOfBooksPresent)
 		{
 		case 5: setsOfFive += count;				
@@ -91,9 +99,13 @@ void findBiggestDiscountedPrice(int book1Count, int book2Count, int book3Count, 
 		case 1: setsOfOne += count;				
 				break;
 		}	
-		decrementBooksByCount(count, book1Count, book2Count, book3Count, book4Count, book5Count);			
-		typesOfBooksPresent = countTypesOfBooksStillPresent(book1Count, book2Count, book3Count, book4Count, book5Count);
+		decrementBooksByCount(count, book1Count, book2Count, book3Count, 
+										book4Count, book5Count);			
+		typesOfBooksPresent = countTypesOfBooksStillPresent(book1Count, book2Count, 
+										book3Count, book4Count, book5Count);
 	}	
+
+	special_condition_of_sets_four_and_four_being_better_than_five_and_three();
 	
 	//special condition of set of 4 & 4 being better than 5 &3
 	if(setsOfFive>0 && setsOfThree>0)
@@ -105,12 +117,14 @@ void findBiggestDiscountedPrice(int book1Count, int book2Count, int book3Count, 
 		
 	}
 	
+	price = total_price(setsOfFive, setsOfFour, setsOfThree, setsOfTwo, setsOfOne);
+	
 	//Total price
-	price = setsOfFive * getDiscountedPrice(5) + 
-			setsOfFour * getDiscountedPrice(4) +
+	price = setsOfFive  * getDiscountedPrice(5) + 
+			setsOfFour  * getDiscountedPrice(4) +
 			setsOfThree * getDiscountedPrice(3) +
-			setsOfTwo * getDiscountedPrice(2)+
-			setsOfOne * getDiscountedPrice(1);
+			setsOfTwo   * getDiscountedPrice(2) +
+			setsOfOne   * getDiscountedPrice(1);
 			
 	cout << "Price after biggest discount: " << price << endl;
 	cout << "Grouping of books for biggest discount: " << endl;
@@ -123,8 +137,48 @@ void findBiggestDiscountedPrice(int book1Count, int book2Count, int book3Count, 
 }
 
 
-int findMinOfSameTypeBooks(int book1Count, int book2Count, int book3Count, int book4Count, int book5Count)
+int findMinOfSameTypeBooksV2(int book1Count, int book2Count, int book3Count, 
+								int book4Count, int book5Count)
 {
+	int minimum = INT_MAX;
+	if(book1Count > 0)
+	{
+		minimum = min(minimum, book1Count);
+	}
+	if(book2Count > 0)
+	{
+		minimum = min(minimum, book2Count);
+	}
+	if(book3Count > 0)
+	{
+		minimum = min(minimum, book3Count);
+	}
+	if(book4Count > 0)
+	{
+		minimum = min(minimum, book4Count);
+	}
+	if(book5Count > 0)
+	{
+		minimum = min(minimum, book5Count);
+	}
+	return minimuum
+}
+
+int findMinOfSameTypeBooksV2(int []bookCount)
+{
+	int minimum = INT_MAX;
+	for(int i=0; i++; ) {
+		if(bookCount[i] > 0)
+		{
+			minimum = min(minimum, bookCount[i]);
+		}
+	}
+	return minimuum
+}
+	
+	
+int findMinOfSameTypeBooks(int book1Count, int book2Count, int book3Count, 
+								int book4Count, int book5Count)
 	//Compare only non-zero elements.	
 	return minAboveZero(book1Count, 
 						minAboveZero(book2Count, 
@@ -144,7 +198,8 @@ int minAboveZero(int a, int b)
 		return min(a,b); //normal min	
 }
 
-int countTypesOfBooksStillPresent(int book1Count, int book2Count, int book3Count, int book4Count, int book5Count)
+int countTypesOfBooksStillPresent(int book1Count, int book2Count, int book3Count, 
+										int book4Count, int book5Count)
 {
 	int types = 0;
 	if(book1Count > 0)
@@ -171,7 +226,8 @@ int countTypesOfBooksStillPresent(int book1Count, int book2Count, int book3Count
 }
 
 
-void decrementBooksByCount(int decrementCount, int &book1Count, int &book2Count, int &book3Count, int &book4Count, int &book5Count)
+void decrementBooksByCount(int decrementCount, int &book1Count, int &book2Count, 
+								int &book3Count, int &book4Count, int &book5Count)
 {
 	if(book1Count > 0)
 		book1Count -= decrementCount;
