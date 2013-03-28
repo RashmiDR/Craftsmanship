@@ -8,18 +8,6 @@
 
 #include <iostream>
 
-#include "gtest/gtest.h"
-
-GTEST_API_ int main(int argc, char **argv) {
-    std::cout << "Running main() from gtest_main.cc\n";
-    
-    testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
-
-/*
-#include <iostream>
-
 #include "rover.h"
 
 using namespace std;
@@ -28,11 +16,15 @@ void printRoverTestResult(string testDescription, bool testStatus, Point positio
 
 int main(int argc, const char * argv[])
 {
+
 	Rover rover;
+    Sphere sphere;
 	Point finalPosition;
 	int numOfPassingTests = 0;
 	int numOfFailingTests = 0;
-
+    
+	sphere.SetSphereDimensions(100,100);    
+    rover.PlaceRoverInSphere(sphere);
 	
 	
 	//general test
@@ -56,13 +48,13 @@ int main(int argc, const char * argv[])
 	if(finalPosition.x == 0 && finalPosition.y == 0)
 	{
 		numOfPassingTests++;
-		printRoverTestResult("Clockwise test", true, finalPosition);
+		printRoverTestResult("clockwise test", true, finalPosition);
 		
 	}
 	else
 	{
 		numOfFailingTests++;
-		printRoverTestResult("Clockwise test", false, finalPosition);
+		printRoverTestResult("clockwise test", false, finalPosition);
 	}
     
     //testing anticlockwise
@@ -95,9 +87,27 @@ int main(int argc, const char * argv[])
 		printRoverTestResult("backing test", false, finalPosition);
 	}
     
+	//wrapping test
+	rover.MoveRover(100, 100, DIRECTION_NORTH, "ffrff");
+	finalPosition = rover.GetCurrentPosition();
+	if(finalPosition.x == 2 && finalPosition.y == 2)
+	{
+		numOfPassingTests++;
+		printRoverTestResult("Wrapping test", true, finalPosition);
+	}
+	else
+	{
+		numOfFailingTests++;
+		printRoverTestResult("Wrapping test", false, finalPosition);
+	}
     
     //obstacles
-    rover.SetObstaclesAtPoint(2,2);
+    vector<Point> obstacles;
+    Point p1(2,2);
+    obstacles.push_back(p1);
+    sphere.SetObstaclesAtPoints(obstacles);    
+    rover.PlaceRoverInSphere(sphere);
+    
     rover.MoveRover(0, 0, DIRECTION_NORTH, "ffrff");
 	finalPosition = rover.GetCurrentPosition();
 	if(finalPosition.x == 1 && finalPosition.y == 2)
@@ -130,5 +140,5 @@ void printRoverTestResult(string testDescription, bool testStatus, Point positio
 	cout << testDescription << testResult;
 	cout << "Final rover position: ("<< position.x << " , " <<position.y << ")" << endl;
 }
-*/
+
 
