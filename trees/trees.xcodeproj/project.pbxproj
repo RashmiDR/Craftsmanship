@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421E382B1720606E008F6D34 /* BST.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 421E38291720606E008F6D34 /* BST.cpp */; };
+		421E382F17208C77008F6D34 /* singleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 421E382D17208C77008F6D34 /* singleton.cpp */; };
 		42E308B116ED02810078CD84 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42E308B016ED02810078CD84 /* main.cpp */; };
 		42E308B316ED02810078CD84 /* trees.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 42E308B216ED02810078CD84 /* trees.1 */; };
 		42E308BB16ED02CC0078CD84 /* binaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42E308B916ED02CC0078CD84 /* binaryTree.cpp */; };
@@ -27,6 +29,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		421E38291720606E008F6D34 /* BST.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BST.cpp; sourceTree = "<group>"; };
+		421E382A1720606E008F6D34 /* BST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BST.h; sourceTree = "<group>"; };
+		421E382D17208C77008F6D34 /* singleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = singleton.cpp; path = ../../singleton.cpp; sourceTree = "<group>"; };
+		421E382E17208C77008F6D34 /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = singleton.h; path = ../../singleton.h; sourceTree = "<group>"; };
 		42E308AC16ED02800078CD84 /* trees */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = trees; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E308B016ED02810078CD84 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		42E308B216ED02810078CD84 /* trees.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = trees.1; sourceTree = "<group>"; };
@@ -69,9 +75,13 @@
 				42E308B016ED02810078CD84 /* main.cpp */,
 				42E308B216ED02810078CD84 /* trees.1 */,
 				42E308B916ED02CC0078CD84 /* binaryTree.cpp */,
+				421E38291720606E008F6D34 /* BST.cpp */,
+				421E382A1720606E008F6D34 /* BST.h */,
 				42F8AEB016FBA75E009FA9CA /* KnapsackProblem.cpp */,
 				42F8AEB116FBA75E009FA9CA /* KnapsackProblem.h */,
 				42E308BA16ED02CC0078CD84 /* binaryTree.h */,
+				421E382D17208C77008F6D34 /* singleton.cpp */,
+				421E382E17208C77008F6D34 /* singleton.h */,
 			);
 			path = trees;
 			sourceTree = "<group>";
@@ -130,6 +140,8 @@
 				42E308B116ED02810078CD84 /* main.cpp in Sources */,
 				42E308BB16ED02CC0078CD84 /* binaryTree.cpp in Sources */,
 				42F8AEB216FBA75E009FA9CA /* KnapsackProblem.cpp in Sources */,
+				421E382B1720606E008F6D34 /* BST.cpp in Sources */,
+				421E382F17208C77008F6D34 /* singleton.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

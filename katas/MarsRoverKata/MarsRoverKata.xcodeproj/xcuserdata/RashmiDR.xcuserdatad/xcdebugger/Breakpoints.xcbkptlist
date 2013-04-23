@@ -13,7 +13,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "173"
          endingLineNumber = "173"
-         landmarkName = "Rover::turnRight()"
+         landmarkName = "Rover::turnLeft()"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -52,7 +52,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "27"
          endingLineNumber = "27"
-         landmarkName = "Rover::SetCurrentPosition(int x, int y)"
+         landmarkName = "Rover::initializeObstacleGrid()"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

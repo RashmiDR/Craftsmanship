@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		424644261703F5EA00B4E685 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 424644251703F5EA00B4E685 /* main.cpp */; };
 		424644281703F5EA00B4E685 /* MapExample.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 424644271703F5EA00B4E685 /* MapExample.1 */; };
+		424644361704992100B4E685 /* rover.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 424644341704992100B4E685 /* rover.cpp */; };
+		424644391704998500B4E685 /* sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 424644371704998500B4E685 /* sphere.cpp */; };
+		4246443C17049B0600B4E685 /* point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4246443A17049B0600B4E685 /* point.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +31,12 @@
 		424644211703F5EA00B4E685 /* MapExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MapExample; sourceTree = BUILT_PRODUCTS_DIR; };
 		424644251703F5EA00B4E685 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		424644271703F5EA00B4E685 /* MapExample.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MapExample.1; sourceTree = "<group>"; };
+		424644341704992100B4E685 /* rover.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rover.cpp; sourceTree = "<group>"; };
+		424644351704992100B4E685 /* rover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rover.h; sourceTree = "<group>"; };
+		424644371704998500B4E685 /* sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sphere.cpp; sourceTree = "<group>"; };
+		424644381704998500B4E685 /* sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sphere.h; sourceTree = "<group>"; };
+		4246443A17049B0600B4E685 /* point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = point.cpp; sourceTree = "<group>"; };
+		4246443B17049B0600B4E685 /* point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = point.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +69,14 @@
 		424644241703F5EA00B4E685 /* MapExample */ = {
 			isa = PBXGroup;
 			children = (
+				424644341704992100B4E685 /* rover.cpp */,
+				424644351704992100B4E685 /* rover.h */,
+				424644371704998500B4E685 /* sphere.cpp */,
+				424644381704998500B4E685 /* sphere.h */,
 				424644251703F5EA00B4E685 /* main.cpp */,
 				424644271703F5EA00B4E685 /* MapExample.1 */,
+				4246443A17049B0600B4E685 /* point.cpp */,
+				4246443B17049B0600B4E685 /* point.h */,
 			);
 			path = MapExample;
 			sourceTree = "<group>";
@@ -118,6 +133,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				424644261703F5EA00B4E685 /* main.cpp in Sources */,
+				424644361704992100B4E685 /* rover.cpp in Sources */,
+				424644391704998500B4E685 /* sphere.cpp in Sources */,
+				4246443C17049B0600B4E685 /* point.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

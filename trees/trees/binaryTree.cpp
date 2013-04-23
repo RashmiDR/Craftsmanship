@@ -14,8 +14,6 @@
 using namespace std;
 
 
-
-
 bool BinaryTree::IsEmpty()
 {
     return (root == NULL);
@@ -99,24 +97,6 @@ int BinaryTree::leafCount(BinaryTreeNode *node)
     return leafCount(node->left) + leafCount(node->right);
 }
 
-void BinaryTree::DestroyTree()
-{
-    destroy(root);
-}
-
-void BinaryTree::destroy(BinaryTreeNode *node)
-{
-    if(node == NULL)
-        return;
-    else if(node->left == NULL && node->right == NULL)
-    {
-        delete node;
-        node = NULL;
-    }
-    destroy(node->left);
-    destroy(node->right);
-}
-
 int BinaryTree::getHeight(BinaryTreeNode *node)
 {
     if(node == NULL)
@@ -126,195 +106,6 @@ int BinaryTree::getHeight(BinaryTreeNode *node)
     else
     {
         return 1+ max(getHeight(node->left), getHeight(node->right));
-    }
-    
-}
-
-void BinaryTree::InsertNode(int data)
-{
-    insert(data);
-
-}
-
-
-void BinaryTree::insert(int data)
-{
-    BinaryTreeNode *currentNode = root;
-    BinaryTreeNode *prevNode = NULL;
-    if(root == NULL)
-    {
-        root = createNode(data);
-        return;
-    }
-    
-    while(currentNode)
-    {
-        prevNode = currentNode;
-        if(data < currentNode->data)
-        {
-             currentNode = currentNode->left;
-        }
-        else
-        {
-            currentNode = currentNode->right;
-        }
-    }
-
-    currentNode = createNode(data);
-    if(data < prevNode->data)
-    {
-        prevNode->left = currentNode;
-    }
-    else
-    {
-        prevNode->right = currentNode;
-    }
-    
-    
-}
-
-BinaryTreeNode* BinaryTree::createNode(int data)
-{
-    BinaryTreeNode *newNode = new BinaryTreeNode(data);
-    if(newNode != NULL)
-    {
-        return newNode;
-    }
-    return NULL;
-
-}
-
-bool BinaryTree::Search(int key)
-{
-    BinaryTreeNode* node = root;
-
-    
-    while(node != NULL)
-    {
-        if(key == node->data)
-        {
-            return true;        
-        }        
-        else if(key < node->data)
-        {
-            node = node->left;
-        }
-        else
-        {
-            node = node->right;
-        }
-    }
-    return false;
-}
-
-void BinaryTree::Delete(int key)
-{
-    BinaryTreeNode *node = root, *prevNode = root;
-    bool found = false;
-    
-    while(node!= NULL)
-    {
-        if(key == node->data)
-        {
-            found = true;
-            break;
-        }
-        else 
-        {
-            prevNode = node;
-            if(key < node->data)
-            {
-                node = node->left;
-            }
-            else if(key > node->data)
-            {
-                node = node->right;
-            }
-        }
-    }
-    
-    if(found == true)
-    {
-        if(node ==root)
-        {
-            deleteFromTree(root);
-        }
-        else if(key < prevNode->data)
-        {
-            deleteFromTree(prevNode->left);
-        }
-        else if(key > prevNode->data)
-        {
-            deleteFromTree(prevNode->right);
-        }
-        
-    }
-    else
-    {
-        cout << "Ket to be deleted not found in the tree" << endl;
-    }
-    
-}
-
-void BinaryTree::deleteFromTree(BinaryTreeNode *node)
-{
-    BinaryTreeNode *temp, *prevNode, *currentNode;
-    
-    if(node == NULL)
-    {
-        cout << "Node to be deleted is NULL" << endl;
-    }
-    if(node->left == NULL && node->right == NULL)
-    {
-        temp = node;
-        node = NULL;
-        delete temp;
-    }
-    else if(node->left == NULL)
-    {
-        temp = node;
-        node = node->right;
-        delete node;
-    }
-    else if(node->right == NULL)
-    {
-        temp = node;
-        node =node->left;
-        delete temp;
-    }
-    else
-    {
-        //When the node to be deleted has both right and lef node,
-        //you need to find the approprotae node to replace the node to be deleted.
-        //Replace with node found from (Go left and find its right most)
-        //or with node from(Go right and find its left most)
-        //Below, I have followed 'Go left and find its right most'
-        prevNode = NULL;
-        
-        //Go to the left node
-        currentNode = node->left;
-        
-        
-        //Find the rightmost of the left node
-        while(currentNode != NULL)
-        {
-            prevNode = currentNode;
-            currentNode = currentNode->left;
-        }
-        
-        //Copy the contents of the current node to node and delete the current node, so that right tree of the node to be deleted remains intact.
-        node->data = currentNode->data;
-        
-        if(prevNode == NULL)// the left child has no right tree, so take that to be the node to replace with
-        {            
-            node->left = currentNode->left;
-        }
-        else
-        {
-            prevNode->right = currentNode->left;
-        }
-        delete currentNode;
-        
     }
     
 }
@@ -468,7 +259,7 @@ void BinaryTree::printbylevel(BinaryTreeNode* node, int level)
     }   
 }
 
-//print the leaf nodes first, followed by the preios level and root not in the end
+//print the leaf nodes first, followed by the previous level and root node in the end
 void BinaryTree::ReverseLevelPrint()
 {
     int levels = getHeight(root);
@@ -515,8 +306,8 @@ int BinaryTree::minDepth(BinaryTreeNode *node)
     
 }
 
-//Given a binary search tree, design an algorithm which creates a linked list of all the nodes at each depth (eg, if you have a tree with depth D, you’ll have D linked lists).
-//static BinaryTreeNode* BinaryTree::CreateBinaryTree(int *sortedArray, int arrayLength)
+//Construct Binary tree from sorted array
+
 BinaryTree::BinaryTree(int *sortedArray, int arrayLength)
 {
     root = constructBinaryTreeFromSortedArray(sortedArray, 0, arrayLength-1);

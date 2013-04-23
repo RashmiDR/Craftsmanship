@@ -1,0 +1,78 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		424643A9170145D700B4E685 /* rover.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rover.cpp; sourceTree = "<group>"; };
+		424643AA170145D700B4E685 /* rover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rover.h; sourceTree = "<group>"; };
+		424643AB1701463E00B4E685 /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		424643AC1701463E00B4E685 /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		424643A0170145B200B4E685 = {
+			isa = PBXGroup;
+			children = (
+				424643A9170145D700B4E685 /* rover.cpp */,
+				424643AB1701463E00B4E685 /* test.cpp */,
+				424643AC1701463E00B4E685 /* test.h */,
+				424643AA170145D700B4E685 /* rover.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		424643A2170145B200B4E685 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 424643A5170145B200B4E685 /* Build configuration list for PBXProject "MarsRover" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 424643A0170145B200B4E685;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		424643A7170145B200B4E685 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		424643A8170145B200B4E685 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		424643A5170145B200B4E685 /* Build configuration list for PBXProject "MarsRover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				424643A7170145B200B4E685 /* Debug */,
+				424643A8170145B200B4E685 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 424643A2170145B200B4E685 /* Project object */;
+}
